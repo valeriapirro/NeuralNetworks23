@@ -38,3 +38,4 @@ This application of the approach is clearly an ideal one since it lays under the
 
 
 -proponent opponent ha un for in piu che gira sui punti di test, nel paper prendono 11 punti di palo alto. fatto rate di latitude e longitude coerenti con palo alto e seleziona 11 ma è troppo lento e ripetuto tutto per fare come l'altro e la figura è coerente
+
