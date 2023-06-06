@@ -15,8 +15,10 @@ One notebook containing:
 https://arxiv.org/abs/2002.08484
 
 This paper formalizes the process of identifying the influence that a training instance has on the prediction performed by the Neural Network on a test instance. In the paper, two different methods are implemented. 
+
 First of all, the influence that the training instance z exerts on a test example z' is defined as the change of loss measured between the prediction made on z' before giving z to the Network and the prediction made on z' after giving z to the Network (rivedere la frase). To apply this principle on the whole dataset, the loss changes have to be accumulated while training is progressing. 
-This application of the approach is clearly an ideal one since it lays under the assumption to optimize each observation at a time, but it's the first one analyzed by the research, resulting in the TracInIdeal(z, z') (inserire formula)
+
+This application of the approach is clearly an ideal one since it lays under the assumption to optimize each observation at a time. It's the first approach analyzed by the research, resulting in the $ TracInIdeal(z, z') $ (inserire formula) 
 
 -------------
 
