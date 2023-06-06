@@ -26,6 +26,9 @@ The first term of the expression represents the loss measured on the prediction 
 Some intermediat results are then analyzed and proposed to solve the applicability problems in the TracInIdeal formula, resulting in the final expression <br>
 <p align = "center">
   $TracInCP(z, z') = \sum\limits_{i = 1}^{k} (\eta_i \nabla l(w_t, z') * l(w_t, z))$ 
+  </p> <br>
+
+where the term $k$ represents the checkpoints.
 
 -------------
 
