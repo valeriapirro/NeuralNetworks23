@@ -21,7 +21,9 @@ First of all, the influence that the training instance z exerts on a test exampl
 This application of the approach is clearly an ideal one since it lays under the assumption to optimize each observation at a time. It's the first approach analyzed by the research, resulting in: <br> 
 <p align="center">
   $TracInIdeal(z, z') = \sum\limits_{\substack{t:z_t \\ =z}} (l(w_t, z) - l(w_{t+1}, z'))$ 
-  </p>
+  </p> <br>
+  
+where the first term of the sum represents the loss measured on the prediction $(w_t)$ at a timestep previous to the use of z in the training and the second term represents the same but in the timestep following the use of the example z. Both are measured on the prediction made about $(z')$ .
 
 -------------
 
