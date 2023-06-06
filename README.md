@@ -21,7 +21,7 @@ First of all, the influence that the training instance z exerts on a test exampl
   $TracInIdeal(z, z') = \sum\limits_{\substack{t:z_t \\ =z}} (l(w_t, z) - l(w_{t+1}, z'))$ 
   </p> <br>
 It's not a convenient formula to apply though, since as mentioned before it lays under the assumption of step by step optimization during training and also because all the test data points need to be known in that process, making the whole application extremely expensive in terms of computational resources requirements.
-The first term of the expression represents the loss measured on the prediction $w_t$ at a timestep previous to the use of z in the training and the second term represents the same but in the timestep following the use of the example z. Both are measured on the prediction made about the training example $z'$ .
+The first term of the expression represents the loss measured on the prediction $w_t$ at a timestep previous to the use of z in the training and the second term represents the same but in the timestep following the use of the example z. Both are measured on the prediction made about the training example $z'$.
 
 -------------
 
