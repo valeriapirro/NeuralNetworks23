@@ -18,7 +18,7 @@ This paper formalizes the process of identifying the influence that a training i
 
 First of all, the influence that the training instance z exerts on a test example z' is defined as the change of loss measured between the prediction made on z' before giving z to the Network and the prediction made on z' after giving z to the Network (rivedere la frase). To apply this principle on the whole dataset, the loss changes have to be accumulated while training is progressing. 
 
-This application of the approach is clearly an ideal one since it lays under the assumption to optimize each observation at a time. It's the first approach analyzed by the research, resulting in the TracInIdeal(z, z') = ![equation](https://render.githubusercontent.com/render/math?math=\sum_{t=z_t}^{z} l(w_t, z) - l(w_{t+1}, z')) 
+This application of the approach is clearly an ideal one since it lays under the assumption to optimize each observation at a time. It's the first approach analyzed by the research, resulting in the TracInIdeal(z, z') = $sum_{t=z_t}^{z} l(w_t, z) - l(w_{t+1}, z')$ 
 
 -------------
 
