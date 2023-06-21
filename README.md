@@ -5,7 +5,7 @@ https://arxiv.org/abs/2002.08484
 
 This paper formalizes the process of identifying the influence that a training instance has on the prediction performed by the Neural Network on a test instance. In the paper, two different methods are implemented. 
 
-First of all, the influence that the training instance $z$ exerts on a test example $z'$ is defined as the change of loss measured between the prediction made on $z'$ before giving z to the Network and the prediction made on $z'$ after giving $z$ to the Network (rivedere la frase). To apply this principle to the whole dataset, the loss changes have to be accumulated while training is progressing. This application is clearly an ideal one since it lays under the assumption to optimize each sample at a time. It's the first approach analyzed by the research, resulting in:
+First of all, the influence that the training instance $z$ exerts on a test example $z'$ is defined as the change of loss measured between the prediction made on $z'$ before giving $z$ to the Network and the prediction made on $z'$ after $z$ to the Network. To apply this principle to the whole dataset, the loss changes have to be accumulated while training is progressing. This application is clearly an ideal one since it lays under the assumption to optimize each sample at a time. It's the first approach analyzed by the research, resulting in:
 
 $$TracInIdeal(z, z') = \sum\limits_{\substack{t:z_t \\ =z}} (l(w_t, z) - l(w_{t+1}, z'))$$ 
 
@@ -18,7 +18,7 @@ $$TracInCP(z, z') = \sum\limits_{i = 1}^{k} (\eta_i \nabla l(w_t, z') * \nabla l
 
 where the term $k$ represents the checkpoints.
 
-In this project have been applied Self Influence and Proponent approaches on a Regression Model, exploiting the California Housing Prices dataset. 
+In this project we have implemented the Self Influence and the Proponent approaches on a Regression probelm, exploiting the California Housing Prices dataset. 
 The dataset contains 20,640 observations on 9 variables: median house value, median income, housing median age, total rooms, total bedrooms, population, households, latitude, and longitude in that same order. The dependent variable is the median house value which is the label. 
 
 -------------
