@@ -1,12 +1,3 @@
-# NeuralNetworks23
-
-Prepare a public repository with your code, which should be properly polished and documented. 
-Inside the repository, add:
-
-One notebook containing:
--a summary of the main results you have obtained.
-
--------------
 # Estimating Training Data Influence by Tracing Gradient Descent
 # Apply TracIn to a regression problem
 
