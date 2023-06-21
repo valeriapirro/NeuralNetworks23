@@ -5,18 +5,16 @@ https://arxiv.org/abs/2002.08484
 
 This paper formalizes the process of identifying the influence that a training instance has on the prediction performed by the Neural Network on a test instance. In the paper, two different methods are implemented. 
 
-First of all, the influence that the training instance z exerts on a test example z' is defined as the change of loss measured between the prediction made on z' before giving z to the Network and the prediction made on z' after giving z to the Network (rivedere la frase). To apply this principle to the whole dataset, the loss changes have to be accumulated while training is progressing. This application is clearly an ideal one since it lays under the assumption to optimize each sample at a time. It's the first approach analyzed by the research, resulting in: <br> 
-<p align="center">
-  $$TracInIdeal(z, z') = \sum\limits_{\substack{t:z_t \\ =z}} (l(w_t, z) - l(w_{t+1}, z'))$$ 
-  </p> <br>
-It's not a convenient formula to apply though, since as mentioned before it lays under the assumption of step-by-step optimization during training and also because all the test data points need to be known in that process, making the whole application extremely expensive in terms of computational resources requirements.
-The first term of the expression represents the loss measured on the prediction $w_t$ at a timestep previous to the use of z in the training and the second term represents the same but in the timestep following the use of the example z. Both are measured on the prediction made about the training example z'. 
-<br>
+First of all, the influence that the training instance $z$ exerts on a test example $z'$ is defined as the change of loss measured between the prediction made on $z'$ before giving z to the Network and the prediction made on $z'$ after giving $z$ to the Network (rivedere la frase). To apply this principle to the whole dataset, the loss changes have to be accumulated while training is progressing. This application is clearly an ideal one since it lays under the assumption to optimize each sample at a time. It's the first approach analyzed by the research, resulting in:
 
-Some intermediate results are then analyzed and proposed to solve the applicability problems in the TracInIdeal formula, resulting in the final expression <br>
-<p align = "center">
-  $$TracInCP(z, z') = \sum\limits_{i = 1}^{k} (\eta_i \nabla l(w_t, z') * \nabla l(w_t, z))$$
-  </p> <br>
+$$TracInIdeal(z, z') = \sum\limits_{\substack{t:z_t \\ =z}} (l(w_t, z) - l(w_{t+1}, z'))$$ 
+
+It's not a convenient formula to apply though, since as mentioned before it lays under the assumption of step-by-step optimization during training and also because all the test data points need to be known in that process, making the whole application extremely expensive in terms of computational resources requirements.
+The first term of the expression represents the loss measured on the prediction $w_t$ at a timestep previous to the use of $z$ in the training and the second term represents the same but in the timestep following the use of the example z. Both are measured on the prediction made about the training example $z'$.
+
+Some intermediate results are then analyzed and proposed to solve the applicability problems in the TracInIdeal formula, resulting in the final expression:
+
+$$TracInCP(z, z') = \sum\limits_{i = 1}^{k} (\eta_i \nabla l(w_t, z') * \nabla l(w_t, z))$$
 
 where the term $k$ represents the checkpoints.
 
