@@ -1,5 +1,5 @@
 # Estimating Training Data Influence by Tracing Gradient Descent
-# Apply TracIn to a regression problem
+### Apply TracIn to a regression problem
 
 https://arxiv.org/abs/2002.08484
 
@@ -23,13 +23,13 @@ The dataset contains 20,640 observations on 9 variables: median house value, med
 
 -------------
 
-# Installation - Getting Started
+## Installation - Getting Started
 
 To run the 3 notebooks the following libraries must be installed via pip:
 
 <ul><li>Numpy</li><li>Matplotlib</li><li>Torch</li><li>Seaborn</li><li>Sklearn</li><li>TDQM</li><li>PIL</li><li>Torchmetrics</li></ul>
 
-# Content Map
+## Content Map
 
 In this repository can be found three notebooks and a folder, containing:
 <ul><li>CHP_regression_model: this notebook is used to instantiate the model and generate the checkpoints from the training. Those checkpoints will be used in the following notebooks.</li><li>CHP_selfinfluence: this notebook contains the implementation of the method and the experiments on the self-influence of the above dataset.</li><li>CHP_proponents: This notebook contains the implementation of the method and the experiments on the proponent for 11 selected instances from the test set, located in Palo Alto. </li><li>CHP_checkpoints: This folder contains the checkpoints saved from previous runs of CHP_regression_model organized by batch size. They can be used to run CHP_selfinfluence and CHP_proponents without the need to re-run the whole training. </li></ul>
