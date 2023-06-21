@@ -23,11 +23,14 @@ First of all, the influence that the training instance z exerts on a test exampl
 It's not a convenient formula to apply though, since as mentioned before it lays under the assumption of step by step optimization during training and also because all the test data points need to be known in that process, making the whole application extremely expensive in terms of computational resources requirements.
 The first term of the expression represents the loss measured on the prediction $w_t$ at a timestep previous to the use of z in the training and the second term represents the same but in the timestep following the use of the example z. Both are measured on the prediction made about the training example $z'$ . <br> 
 
-Some intermediat results are then analyzed and proposed to solve the applicability problems in the TracInIdeal formula, resulting in the final expression <br>
+Some intermediate results are then analyzed and proposed to solve the applicability problems in the TracInIdeal formula, resulting in the final expression <br>
 <p align = "center">
   $TracInCP(z, z') = \sum\limits_{i = 1}^{k} (\eta_i \nabla l(w_t, z') * l(w_t, z))$ 
   </p> <br>
 
 where the term $k$ represents the checkpoints.
+
+In this project have been applied Self Influence and Proponent approaches on a Regression Model, exploiting the California Housing Prices dataset. 
+The dataset contains 20,640 observations on 9 variables: median house value, median income, housing median age, total rooms, total bedrooms, population, households, latitude, and longitude in that same order. The dependent variable is the median house value which is the label. 
 
 -------------
