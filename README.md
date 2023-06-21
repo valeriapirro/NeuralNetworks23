@@ -27,7 +27,7 @@ The dataset contains 20,640 observations on 9 variables: median house value, med
 
 To run the 3 notebooks the following libraries must be installed via pip:
 
-<ul><li>Numpy</li><li>Matplotlib</li><li>Torch</li><li>Seaborn</li><li>Sklearn</li><li>TDQM</li><li>PIL</li><li>Torchmetrics</li></ul>
+<ul><li>Numpy</li><li>Matplotlib</li><li>Torch</li><li>Seaborn</li><li>Sklearn</li><li>TQDM</li><li>PIL</li><li>Torchmetrics</li></ul>
 
 ## Content Map
 
